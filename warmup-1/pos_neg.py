@@ -4,12 +4,13 @@ negative. '''
 
 
 def pos_neg(a, b, negative):
+    match = False
     if negative:
         if a < 0 and b < 0:
-            return True
+            match = True
     else:
-        if a < 0 and b > 0:
-            return True
-        elif b < 0 and a > 0:
-            return True
-    return False
+        if a < 0 < b:
+            match = True
+        elif b < 0 < a:
+            match = True
+    return match
