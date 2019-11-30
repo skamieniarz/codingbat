@@ -1,2 +1,2 @@
-# codingbat
-Solutions to problems from CodingBat.
+# codingbat #
+Solutions to Python problems from [CodingBat](https://codingbat.com).
