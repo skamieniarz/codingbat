@@ -4,11 +4,6 @@ come immediately after a 13 also do not count. '''
 
 
 def sum13(nums):
-    nums_sum = 0
-    after_13_index = -1
-    for i, num in enumerate(nums):
-        if num != 13 and i != after_13_index:
-            nums_sum += num
-        if num == 13 and i != (len(nums) - 1):
-            after_13_index = i + 1
-    return nums_sum
+    while 13 in nums:
+        del nums[nums.index(13):nums.index(13) + 2]
+    return sum(nums)
