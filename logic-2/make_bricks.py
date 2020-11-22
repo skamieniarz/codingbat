@@ -5,10 +5,9 @@ little harder than it looks and can be done without any loops. '''
 
 
 def make_bricks(small, big, goal):
-    possible = False
     if small + big * 5 >= goal:
-        big_needed = int(goal / 5)
+        big_needed = goal // 5
         big_matched = big_needed if big_needed <= big else big
         if goal - big_matched * 5 <= small:
-            possible = True
-    return possible
+            return True
+    return False
